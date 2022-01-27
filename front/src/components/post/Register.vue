@@ -44,8 +44,8 @@ export default {
   methods: {
     createCustomer() {
       let customerData = {
-        firstname: this.first_name,
-        lastname: this.last_name,
+        firstname: this.firstname,
+        lastname: this.lastname,
         email: this.email,
         password: this.phone,
       };
