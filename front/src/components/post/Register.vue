@@ -52,7 +52,7 @@ export default {
       this.__submitToServer(customerData);
     },
     __submitToServer(data) {
-      axios.post(`${server.baseURL}/customer/register`, data).then(data => {
+      axios.post(`${server.baseURL}/customer/create`, data).then(data => {
         router.push({ name: "home" });
       });
     }
