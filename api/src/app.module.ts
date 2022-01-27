@@ -9,6 +9,9 @@ import { BlogModule } from './blog/blog.module';
     MongooseModule.forRoot('mongodb://localhost/nest-blog', {
       useNewUrlParser: true,
     }),
+    MongooseModule.forRoot('mongodb://localhost/customer-app', {
+      useNewUrlParser: true,
+    }),
     BlogModule,
   ],
   controllers: [AppController],
