@@ -12,7 +12,7 @@ import {
   Param,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
-import { CreateCustomerDTO } from '../blog/dto/create-customer.dto';
+import { CreateCustomerDTO } from './dto/create-customer.dto';
 
 @Controller('customer')
 export class CustomerController {
