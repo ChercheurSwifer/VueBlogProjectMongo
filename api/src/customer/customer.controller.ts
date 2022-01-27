@@ -19,7 +19,7 @@ export class CustomerController {
   constructor(private customerService: CustomerService) {}
 
   // add a customer
-  @Post('/register')
+  @Post('/create')
   async addCustomer(@Res() res, @Body() createCustomerDTO: CreateCustomerDTO) {
     const customer = await this.customerService.addCustomer(createCustomerDTO);
     return res.status(HttpStatus.OK).json({
