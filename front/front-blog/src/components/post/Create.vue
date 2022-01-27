@@ -5,7 +5,7 @@
           <form id="create-post-form" @submit.prevent="createPost">
                <div class="form-group col-md-12">
                 <label for="title"> Titre </label>
-                <input type="text" id="title" v-model="title" name="title" class="form-control" placeholder="Enter title">
+                <input type="text" id="title" v-model="title" name="title" class="form-control" placeholder="Veuillez écrire un titre">
                </div>
               <div class="form-group col-md-12">
                   <label for="description"> Description </label>
