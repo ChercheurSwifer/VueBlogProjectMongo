@@ -4,7 +4,7 @@ import HomeComponent from '@/views/Home';
 import EditComponent from '@/components/post/Edit';
 import CreateComponent from '@/components/post/Create';
 import PostComponent from '@/components/post/Post';
-import LoginComponent from '@/components/post/Login';
+import RegisterComponent from '@/components/post/Register';
 
 Vue.use(Router)
 
@@ -14,7 +14,7 @@ export default new Router({
     { path: '/', redirect: { name: 'home' } },
     { path: '/home', name: 'home', component: HomeComponent },
     { path: '/create', name: 'Create', component: CreateComponent },
-    { path: '/connexion', name: 'Login', component: LoginComponent },
+    { path: '/register', name: 'Register', component: RegisterComponent },
     { path: '/edit/:id', name: 'Edit', component: EditComponent },
     { path: '/post/:id', name: 'Post', component: PostComponent }
   ]
