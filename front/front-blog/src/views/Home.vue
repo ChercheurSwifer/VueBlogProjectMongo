@@ -20,13 +20,13 @@
                     <div class="btn-group" style="margin-bottom: 20px;">
                       <router-link :to="{name: 'Post', params: {id: post._id}}" class="btn btn-sm btn-outline-secondary">Voir l'article </router-link>
                        <router-link :to="{name: 'Edit', params: {id: post._id}}" class="btn btn-sm btn-outline-secondary">Editer l'article </router-link>
-                       <button class="btn btn-sm btn-outline-secondary" v-on:click="deletePost(post._id)">Supprimer l'article</button>
+                       <button class="btn btn-sm btn-outline-secondary" v-on:click="deletePost(post._id)">Delete Post</button>
                     </div>
                   </div>
 
                   <div class="card-footer">
-                    <small class="text-muted">Posté le: </small><br/>
-                    <small class="text-muted">par:</small>
+                    <small class="text-muted">Posté le: {{ post.date_posted}}</small><br/>
+                    <small class="text-muted">par: {{ post.author}}</small>
                   </div>
 
                 </div>
