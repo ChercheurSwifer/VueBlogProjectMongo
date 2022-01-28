@@ -12,7 +12,7 @@
           <input type="password" id="password" v-model="password" name="title" class="form-control" placeholder="Mot de passe">
         </div>
         <div class="form-group col-md-4 pull-right">
-            <button class="btn btn-success" type="submit" >S'enregistrer</button>
+            <button class="btn btn-success" type="submit" >Se connecter</button>
         </div>
       </form>
     </div>
