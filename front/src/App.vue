@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link to="/">Accueil</router-link> |
       <router-link to="/create">Poster un article</router-link> |
+      <router-link to="/login">Connexion</router-link> |
       <router-link to="/register">S'enregistrer</router-link>
     </div>
     <router-view/>
