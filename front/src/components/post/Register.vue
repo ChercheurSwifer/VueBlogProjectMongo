@@ -40,7 +40,7 @@
           />
         </div>
         <div class="form-group col-md-12">
-          <label for="password">Password</label>
+          <label for="password">Mot de passe</label>
           <input
             type="password"
             id="password"
