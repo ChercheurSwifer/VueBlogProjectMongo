@@ -12,6 +12,7 @@ import { UsersModule } from './users/users.module';
     MongooseModule.forRoot('mongodb://localhost/nest-blog', {
       useNewUrlParser: true,
     }),
+
     CustomerModule,
     BlogModule,
     AuthModule,
