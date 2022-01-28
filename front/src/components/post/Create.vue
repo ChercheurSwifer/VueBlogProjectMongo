@@ -83,7 +83,7 @@ export default {
     },
     __submitToServer(data) {
       axios.post(`${server.baseURL}/blog/post`, data).then((data) => {
-        router.push({ name: "home" });
+        router.push({ name: "homeacceuil" });
       });
     },
   },
