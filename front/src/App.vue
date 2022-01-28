@@ -5,6 +5,7 @@
       <router-link v-if="currentUrl == 'http://localhost:8080/homeacceuil'" to="/create">Poster un article  | </router-link>
       <router-link to="/login">Connexion</router-link> |
       <router-link to="/register">S'enregistrer</router-link>
+      <router-link v-if="currentUrl == 'http://localhost:8080/homeacceuil'" @click.native="disconnect()" to="/home"> | Deconnexion </router-link>
     </div>
     <router-view />
   </div>
@@ -19,6 +20,11 @@ export default{
   },
   created() {
   this.currentUrl = window.location.href;
+  },
+  methods: {
+    disconnect() {
+        this.$router.go(0);
+    },
   },
 }
 </script>
