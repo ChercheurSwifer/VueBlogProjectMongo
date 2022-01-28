@@ -18,16 +18,6 @@ import { CreateCustomerDTO } from './dto/create-customer.dto';
 export class CustomerController {
   constructor(private customerService: CustomerService) {}
 
-  // add a customer
-  @Post('/create')
-  async addCustomer(@Res() res, @Body() createCustomerDTO: CreateCustomerDTO) {
-    const customer = await this.customerService.addCustomer(createCustomerDTO);
-    return res.status(HttpStatus.OK).json({
-      message: 'Customer has been created successfully',
-      customer,
-    });
-  }
-
   // Retrieve customers list
   @Get('customers')
   async getAllCustomer(@Res() res) {
@@ -41,6 +31,16 @@ export class CustomerController {
     const customer = await this.customerService.getCustomer(customerID);
     if (!customer) throw new NotFoundException('Customer does not exist!');
     return res.status(HttpStatus.OK).json(customer);
+  }
+
+  // add a customer
+  @Post('/create')
+  async addCustomer(@Res() res, @Body() createCustomerDTO: CreateCustomerDTO) {
+    const customer = await this.customerService.addCustomer(createCustomerDTO);
+    return res.status(HttpStatus.OK).json({
+      message: 'Customer has been created successfully',
+      customer,
+    });
   }
 
   // Update a customer's details
