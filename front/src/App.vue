@@ -5,7 +5,7 @@
       <router-link to="/create">Poster un article</router-link> |
       <router-link to="/register">S'enregistrer</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
