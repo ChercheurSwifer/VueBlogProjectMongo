@@ -3,15 +3,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { BlogModule } from './blog/blog.module';
+import { CustomerModule } from './customer/customer.module';
 
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://localhost/nest-blog', {
       useNewUrlParser: true,
     }),
-    MongooseModule.forRoot('mongodb://localhost/customer-app', {
-      useNewUrlParser: true,
-    }),
+    CustomerModule,
     BlogModule,
   ],
   controllers: [AppController],
