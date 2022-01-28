@@ -30,7 +30,7 @@
         <div class="form-group col-md-12">
           <label for="email">Email</label>
           <input
-            type="text"
+            type="email"
             id="email"
             v-model="email"
             name="title"
