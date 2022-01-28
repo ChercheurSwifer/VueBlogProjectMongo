@@ -22,7 +22,7 @@
                   class="btn btn-sm btn-outline-secondary"
                   >Voir l'article
                 </router-link>
-                <!-- <router-link
+                <router-link
                   :to="{ name: 'Edit', params: { id: post._id } }"
                   class="btn btn-sm btn-outline-secondary"
                   >Editer l'article
@@ -32,7 +32,7 @@
                   v-on:click="deletePost(post._id)"
                 >
                   Delete Post
-                </button> -->
+                </button>
               </div>
             </div>
 

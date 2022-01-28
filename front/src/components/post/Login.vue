@@ -29,7 +29,8 @@ export default {
   },
   methods: {
     submit() {
-        router.push({ name: "home" });
+        router.push({ name: "homeacceuil" });
+        this.$router.go(0);
     },
   },
 };

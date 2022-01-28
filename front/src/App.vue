@@ -1,14 +1,28 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Accueil</router-link> |
-      <router-link to="/create">Poster un article</router-link> |
+      <router-link v-if="currentUrl == 'http://localhost:8080/home'" to="/home">Accueil | </router-link>
+      <router-link v-if="currentUrl == 'http://localhost:8080/homeacceuil'" to="/create">Poster un article  | </router-link>
       <router-link to="/login">Connexion</router-link> |
       <router-link to="/register">S'enregistrer</router-link>
     </div>
     <router-view />
   </div>
 </template>
+<script>
+
+export default{
+  data: function() {
+      return {
+        currentUrl: "",
+      };
+  },
+  created() {
+  this.currentUrl = window.location.href;
+  },
+}
+</script>
+
 
 <style>
 #app {

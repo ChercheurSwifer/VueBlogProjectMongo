@@ -6,6 +6,7 @@ import CreateComponent from "@/components/post/Create";
 import PostComponent from "@/components/post/Post";
 import RegisterComponent from "@/components/post/Register";
 import LoginComponent from "@/components/post/Login";
+import HomeAcceuilComponent from "@/components/post/HomeAcceuil";
 
 Vue.use(Router);
 
@@ -14,6 +15,7 @@ export default new Router({
   routes: [
     { path: "/", redirect: { name: "home" } },
     { path: "/home", name: "home", component: HomeComponent },
+    { path: "/homeacceuil", name: "homeacceuil", component: HomeAcceuilComponent },
     { path: "/create", name: "Create", component: CreateComponent },
     { path: "/register", name: "Register", component: RegisterComponent },
     { path: "/login", name: "Login", component: LoginComponent },
