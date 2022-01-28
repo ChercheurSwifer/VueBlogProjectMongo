@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link v-if="currentUrl == 'http://localhost:8080/home'" to="/home">Accueil | </router-link>
-      <router-link v-if="currentUrl == 'http://localhost:8080/homeacceuil'" to="/create">Poster un article  | </router-link>
-      <router-link to="/login">Connexion</router-link> |
-      <router-link to="/register">S'enregistrer</router-link>
-      <router-link v-if="currentUrl == 'http://localhost:8080/homeacceuil'" @click.native="disconnect()" to="/home"> | Deconnexion </router-link>
+      <router-link v-if="goodUrl == 'ok'" to="/home">Accueil  </router-link>
+      <router-link v-if="goodUrl == 'nok'" to="/create">  Poster un article</router-link>
+      <router-link v-if="goodUrl == 'ok'" to="/login">  Connexion  </router-link>
+      <router-link v-if="goodUrl == 'ok'" to="/register">  S'enregistrer  </router-link>
+      <router-link v-if="goodUrl == 'nok'" @click.native="disconnect()" to="/home"> | Deconnexion </router-link>
     </div>
     <router-view />
   </div>
@@ -16,10 +16,18 @@ export default{
   data: function() {
       return {
         currentUrl: "",
+        substring: 'acceuil',
+        goodUrl: '',
+        wrongUrl: '',
       };
   },
   created() {
-  this.currentUrl = window.location.href;
+    this.currentUrl = window.location.href;
+    if(this.currentUrl.includes(this.substring)){
+      this.goodUrl = 'nok';
+    } else {
+      this.goodUrl = 'ok';
+    }
   },
   methods: {
     disconnect() {
