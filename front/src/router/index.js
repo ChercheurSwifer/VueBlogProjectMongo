@@ -1,21 +1,21 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HomeComponent from '@/views/Home';
-import EditComponent from '@/components/post/Edit';
-import CreateComponent from '@/components/post/Create';
-import PostComponent from '@/components/post/Post';
-import RegisterComponent from '@/components/post/Register';
+import Vue from "vue";
+import Router from "vue-router";
+import HomeComponent from "@/views/Home";
+import EditComponent from "@/components/post/Edit";
+import CreateComponent from "@/components/post/Create";
+import PostComponent from "@/components/post/Post";
+import RegisterComponent from "@/components/post/Register";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   routes: [
-    { path: '/', redirect: { name: 'home' } },
-    { path: '/home', name: 'home', component: HomeComponent },
-    { path: '/create', name: 'Create', component: CreateComponent },
-    { path: '/register', name: 'Register', component: RegisterComponent },
-    { path: '/edit/:id', name: 'Edit', component: EditComponent },
-    { path: '/post/:id', name: 'Post', component: PostComponent }
-  ]
+    { path: "/", redirect: { name: "home" } },
+    { path: "/home", name: "home", component: HomeComponent },
+    { path: "/create", name: "Create", component: CreateComponent },
+    { path: "/register", name: "Register", component: RegisterComponent },
+    { path: "/edit/:id", name: "Edit", component: EditComponent },
+    { path: "/post/:id", name: "Post", component: PostComponent },
+  ],
 });
